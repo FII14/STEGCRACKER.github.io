@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEGCRACKER</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+    }
+    h1, h2 {
+      color: #ff0000;
+    }
+    .code-block {
+      background-color: #222;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .code-block pre {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-5">STEGCRACKER</h1>
+
+    <img src="jpg.jpg" alt="Steghide Password Cracker" class="img-fluid mt-4">
+
+    <div class="mt-4">
+      <h2>Description</h2>
+      <p>
+        This Python program cracks steghide file passwords using a wordlist. It utilizes the steghide command-line tool to extract information from steghide files by attempting different passwords from the specified wordlist.
+      </p>
+    </div>
+
+    <div class="mt-4">
+      <h2>Prerequisites</h2>
+      <ul>
+        <li>Python 3.x</li>
+        <li>Steghide</li>
+      </ul>
+    </div>
+
+    <div class="mt-4">
+      <h2>Install</h2>
+      <div class="code-block">
+        <pre><code>
+$ git clone https://github.com/FII14/STEGCRACKER.git
+
+$ cd STEGCRACKER
+
+$ pip3 install -r requirements.txt
+
+$ python3 stegcracker.py --help
+        </code></pre>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <h2>Usage</h2>
+      <div class="code-block">
+        <pre><code>python3 stegcracker.py -f path/to/steghide_file -w path/to/wordlist_file</code></pre>
+      </div>
+      <p>Replace <code>path/to/steghide_file</code> with the actual path to your steghide file and <code>path/to/wordlist</code> with the actual path to your wordlist file.</p>
+      <p>Wait for the program to finish. It will iterate through each password in the wordlist and attempt to extract information from the steghide file using the password. If a matching password is found, it will be displayed. If no matching password is found, a message will be shown.</p>
+    </div>
+
+    <div class="mt-4">
+      <h2>Disclaimer</h2>
+      <p>Please remember that the use of Steghide to crack steghide files should be done with proper permission and only for legitimate purposes. Do not use this tool for illegal activities or without the necessary authorization.</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
