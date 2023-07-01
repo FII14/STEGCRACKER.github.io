@@ -26,6 +26,17 @@
       margin-bottom: 0;
     }
   </style>
+    <script>
+    // Menonaktifkan klik kanan
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+  
+    // Menonaktifkan pemilihan teks
+    document.addEventListener('selectstart', function(e) {
+      e.preventDefault();
+    });
+    </script>
 </head>
 <body>
   <div class="container">
